@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "eu-west-2"
+  region = "${var.region}"
 }
 
 # terraform state file setup
@@ -11,6 +11,7 @@ resource "aws_s3_bucket" "terraform-state-storage-s3" {
     enabled = true
   }
 
+  # NOTE this should be true but in dev false makes life easier
   lifecycle {
     prevent_destroy = false
   }
