@@ -5,10 +5,10 @@ variable "region" {
 
 variable "bucket_name" {
   description = "The name of the S3 bucket. Must be globally unique!"
-  default     = "tf-s3-statestore1122"
+  default     = "dwp-cis-s3-tfstatestore"
 }
 
 variable "dynamodb_statelock_name" {
   description = "The name of the DynamoDB table used to lock the state file."
-  default     = "tf-dynamodb-statelock1122"
+  default     = "dwp-cis-dynamodb-tfstatelock"
 }
